@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "0.11"
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq openjdk-7-jre
+ - wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
+
+after_success:
+  - npm run to-csv
+  - npm run write-config
+  - java -jar datasync_1.0_java7.jar

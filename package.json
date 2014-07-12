@@ -1,0 +1,31 @@
+{
+  "name": "Bicycle-Parking",
+  "version": "0.0.0",
+  "description": "Bicycle-Parking =============== Bicycle Parking Locations in the City of Chattanooga.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec",
+    "to-csv": "node tasks/to-csv.js",
+    "write-config": "node tasks/write-config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seabre/Bicycle-Parking.git"
+  },
+  "author": "Sean Brewer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seabre/Bicycle-Parking/issues"
+  },
+  "homepage": "https://github.com/seabre/Bicycle-Parking",
+  "dependencies": {
+    "csv-stringify": "0.0.3",
+    "html-to-text": "^0.1.0",
+    "lodash": "^2.4.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "geojson-assert": "0.0.2",
+    "mocha": "^1.20.1"
+  }
+}
