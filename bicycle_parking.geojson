@@ -4,7 +4,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Miller Plaza",
+        "name": "This is really a test.",
         "description": "16 spaces: 2 Pi Racks, 6 Inverted U racks",
         "type": "2 Pi Racks 6 Inverted U racks",
         "capacity": 16
