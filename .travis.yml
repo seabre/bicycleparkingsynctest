@@ -12,8 +12,9 @@ after_success:
       the master branch. No deployment will be done."; exit 0; fi
   - npm run to-csv
   - npm run write-config
-  - java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i mzz8-ifku -m replace -pf true -sc control.json
+  - java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i $DATASET_ID -m replace -pf true -sc control.json
 env:
+  - DATASET_ID="mzz8-ifku"
   global:
   - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
   - secure: U6UP6giVlLfiU5Y2Kcyrp+WZAIyeVGIUVr1a2RQ+PxHR5s8Rwqjptr+yWCj5vrtkyBev6lFXDKEy5aMhJ2p0zNiKQ5sUMe8ymvKaT30cwSE9QWa4A14UuUSNkHIt5hmfMZAKrAMfypSY9IilEGtel2oP5E7t43SkgK9XCcQTqZc=
