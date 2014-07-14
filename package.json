@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec",
-    "to-csv": "node tasks/to-csv.js",
     "write-config": "node tasks/write-config.js"
   },
   "repository": {
