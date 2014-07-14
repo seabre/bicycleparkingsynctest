@@ -7,18 +7,6 @@ var config = {
   appToken: process.env.APPTOKEN,
 };
 
-var job = {
-  "datasetID": "mzz8-ifku",
-  "fileToPublish": "bicycle_parking.csv",
-  "publishMethod": "replace",
-  "fileToPublishHasHeaderRow": true,
-  "pathToFTPControlFile": "control.json",
-  "publishViaFTP": true,
-  "pathToSavedFile": "bicycle_parking.sij",
-  "jobFilename": "bicycle_parking.sij",
-  "fileVersionUID": 3
-};
-
 var control = {
   "action" : "Replace", 
   "csv" :
@@ -46,15 +34,6 @@ fs.writeFile('config.json', JSON.stringify(config), function(err) {
     console.log("config.json written!");
   }
 }); 
-
-fs.writeFile('bicycle_parking.sij', JSON.stringify(job), function(err) {
-  if(err) {
-    console.log(err);
-    console.log('Failed to write bicycle_parking.sij.');
-  } else {
-    console.log("bicycle_parking.sij written!");
-  }
-});
 
 fs.writeFile('control.json', JSON.stringify(control), function(err) {
   if(err) {

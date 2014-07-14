@@ -8,7 +8,7 @@ before_install:
 after_success:
 - npm run to-csv
 - npm run write-config
-- java -jar datasync_1.0_java7.jar bicycle_parking.sij
+- java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i mzz8-ifku -m replace -pf true -sc control.json
 env:
   global:
   - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
