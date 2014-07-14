@@ -8,7 +8,7 @@ before_install:
 after_success:
   - npm run to-csv
   - npm run write-config
-  - java -jar datasync_1.0_java7.jar
+  - java -jar datasync_1.0_java7.jar bicycle_parking.sij
 env:
   global:
   - secure: UAZCvydsXeAnem2zIQKdFJXsIWPbo3tifsOhfvRUC0bCd7vPqcO9ws+/SY4sKlXf5E8N5uHNEONnJe5qspldHwcThbd+2JLTcK0WAUlxv8tv2MTZ83NgUWqUNMOWO/azwsqFObowFHNeT9EnK0V49sQbsNwjT3c17uUZ5ReCfHQ=
