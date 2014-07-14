@@ -1,17 +1,17 @@
 language: node_js
 node_js:
-  - '0.11'
+- '0.11'
 before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install -qq openjdk-7-jre wget
-  - wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
+- sudo apt-get update -qq
+- sudo apt-get install -qq openjdk-7-jre wget
+- wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
 after_success:
-  - npm run to-csv
-  - npm run write-config
-  - java -jar datasync_1.0_java7.jar bicycle_parking.sij
+- npm run to-csv
+- npm run write-config
+- java -jar datasync_1.0_java7.jar bicycle_parking.sij
 env:
   global:
-  - secure: UAZCvydsXeAnem2zIQKdFJXsIWPbo3tifsOhfvRUC0bCd7vPqcO9ws+/SY4sKlXf5E8N5uHNEONnJe5qspldHwcThbd+2JLTcK0WAUlxv8tv2MTZ83NgUWqUNMOWO/azwsqFObowFHNeT9EnK0V49sQbsNwjT3c17uUZ5ReCfHQ=
-  - secure: CG8hVF69yRjWl78eksYqNrNDxYiv/l5D2pDoEgZ5EFEG5df1+Prjlt/l94IdQAIi23/un2m4TaSRNirUeGqUwfa8Gaf4GESFlNv5E7H5r58OtNrg+FaFUIXWcYBUfM9ti8gEo4BuoRM61KLa/7EvOpUdH5tEXPqVhFNj/NLQgkI=
-  - secure: CJF1QxOQov7R0Z9HaOtNab05Dkl+C3zZjAzo+r5tURC5zFo4dF1ktPT3nDyl5cLiKEmif+5zFOqJZgy9aUVYTc0/xOqHYWxvedGlKtx932j0R7KwODVqZDsEYLe0VOLxXPYKy6l5YhYFwGTN8G70nSF/cZ2l2INgj2ZB4ch3V7A=
-  - secure: bDz0zlmfZ/b6S3wlw4b4y+7xqMEtllTIDQbbmrPb+7SBwI9xJS9QybZ3bkaPI/+RBCayQApjO7x0QqPXdOrNCmaBZCw7QUyx1HwAon2DfTPJqnpLFpn1f5IHZVwErZsePn6FsW22iw08dLhS93yvmV1tXPHh2VmcgB/QcllZnLo=
+  - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
+  - secure: U6UP6giVlLfiU5Y2Kcyrp+WZAIyeVGIUVr1a2RQ+PxHR5s8Rwqjptr+yWCj5vrtkyBev6lFXDKEy5aMhJ2p0zNiKQ5sUMe8ymvKaT30cwSE9QWa4A14UuUSNkHIt5hmfMZAKrAMfypSY9IilEGtel2oP5E7t43SkgK9XCcQTqZc=
+  - secure: dEq9FaS+5xS4vWuM2fkQCtRG5VT7S+md8AFt8ODGcJevr8AOMZVhrjBLlnWn+OW3uO9dTnjFXENDsp26Ow3gJF+7JeUdn03y3WUJoXQfR4j2fVrfpYIr4/2e3oXIiSok8YGUNnp0l1dULwKzYcEFeo10Hzhz1gMjLBh1ejFCyo4=
+  - secure: bn71pdBPPnKToF+4J6sM8HqQo8WPG2J8SNT1QByihZ+FZx6P93pTg6AYJIRZTGJFhD/C5klO6LPNNPRU/9efGtUW81PFx+y7luM1zNKSbJ147iRj+sIwrz+KGFFlz39k/3Pjb/zFAy0WyhhHsGoDLbFdvl6BXOpmZlytQAlrExs=
