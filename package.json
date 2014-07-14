@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -R spec",
+    "to-csv": "node tasks/to-csv.js",
     "write-config": "node tasks/write-config.js"
   },
   "repository": {
@@ -19,7 +20,6 @@
   "homepage": "https://github.com/seabre/Bicycle-Parking",
   "dependencies": {
     "csv-stringify": "0.0.3",
-    "html-to-text": "^0.1.0",
     "lodash": "^2.4.1"
   },
   "devDependencies": {

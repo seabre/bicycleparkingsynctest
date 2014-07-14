@@ -24,7 +24,7 @@ var control = {
   "csv" :
     {
       "useSocrataGeocoding": false,
-      "columns": ['name', 'description', 'type', 'capacity', 'latitude', 'longitude'],
+      "columns": null,
       "skip": 0,
       "fixedTimestampFormat": ["ISO8601","MM/dd/yy","MM/dd/yyyy","dd-MMM-yyyy"],
       "floatingTimestampFormat": ["ISO8601","MM/dd/yy","MM/dd/yyyy","dd-MMM-yyyy"],
@@ -35,12 +35,6 @@ var control = {
       "emptyTextIsNull": true,
       "trimWhitespace": true,
       "trimServerWhitespace": true,
-      "syntheticLocations": {
-        "location_1": {
-          "latitude": "latitude",
-          "longitude": "longitude"
-        }
-      },
       "overrides": {}
     }
 };
