@@ -5,6 +5,16 @@ var config = {
   username: process.env.USERNAME,
   password: process.env.PASSWORD,
   appToken: process.env.APPTOKEN,
+  adminEmail: "",
+  emailUponError: "false",
+  logDatasetID: "",
+  outgoingMailServer: "",
+  smtpPort: "",
+  sslPort: "",
+  smtpUsername: "",
+  smtpPassword: "",
+  filesizeChunkingCutoffMB: "10",
+  numRowsPerChunk: "10000"
 };
 
 var control = {
