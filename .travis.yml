@@ -1,14 +1,16 @@
 language: node_js
 node_js:
-- '0.11'
+  - '0.11'
 before_install:
-- sudo apt-get update -qq
-- sudo apt-get install -qq openjdk-7-jre wget
-- wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq openjdk-7-jre wget
+  - wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
 after_success:
-- npm run to-csv
-- npm run write-config
-- java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i mzz8-ifku -m replace -pf true -sc control.json
+  - if [ "$TRAVIS_PULL_REQUEST" == "true" ] || [ "$TRAVIS_BRANCH" != "master"]; then echo "This is a
+      pull request or you are not working on the master branch. No deployment will be done."; exit 0; fi
+  - npm run to-csv
+  - npm run write-config
+  - java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i mzz8-ifku -m replace -pf true -sc control.json
 env:
   global:
   - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
