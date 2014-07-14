@@ -6,7 +6,7 @@ before_install:
   - sudo apt-get install -qq openjdk-7-jre wget
   - wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
 after_success:
-  - if [[ "$TRAVIS_PULL_REQUEST" == "true" ]]; then echo "This is a
+  - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then echo "This is a
       pull request. No deployment will be done."; exit 0; fi
   - if [[ "$TRAVIS_BRANCH" != "master" ]]; then echo "This is not
       the master branch. No deployment will be done."; exit 0; fi
