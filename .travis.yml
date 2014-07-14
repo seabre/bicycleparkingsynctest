@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '0.11'
+  - '0.10'
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq openjdk-7-jre wget
@@ -14,9 +14,9 @@ after_success:
   - npm run write-config
   - java -jar datasync_1.0_java7.jar -c config.json -f bicycle_parking.csv -h true -i $DATASET_ID -m replace -pf true -sc control.json
 env:
-  - DATASET_ID="mzz8-ifku"
   global:
-  - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
-  - secure: U6UP6giVlLfiU5Y2Kcyrp+WZAIyeVGIUVr1a2RQ+PxHR5s8Rwqjptr+yWCj5vrtkyBev6lFXDKEy5aMhJ2p0zNiKQ5sUMe8ymvKaT30cwSE9QWa4A14UuUSNkHIt5hmfMZAKrAMfypSY9IilEGtel2oP5E7t43SkgK9XCcQTqZc=
-  - secure: dEq9FaS+5xS4vWuM2fkQCtRG5VT7S+md8AFt8ODGcJevr8AOMZVhrjBLlnWn+OW3uO9dTnjFXENDsp26Ow3gJF+7JeUdn03y3WUJoXQfR4j2fVrfpYIr4/2e3oXIiSok8YGUNnp0l1dULwKzYcEFeo10Hzhz1gMjLBh1ejFCyo4=
-  - secure: bn71pdBPPnKToF+4J6sM8HqQo8WPG2J8SNT1QByihZ+FZx6P93pTg6AYJIRZTGJFhD/C5klO6LPNNPRU/9efGtUW81PFx+y7luM1zNKSbJ147iRj+sIwrz+KGFFlz39k/3Pjb/zFAy0WyhhHsGoDLbFdvl6BXOpmZlytQAlrExs=
+    - DATASET_ID="mzz8-ifku"
+    - secure: ENz7Fcl5uUS7rnWSZw9xSspl3Yixy/Zw17G87ZQ7iNfbCcqproS6eDgJOXS1D6fdWhAa+Tda5QcR3T2Ntwz1fbGKFLZ8/VHxn4Md16W7gZjE+Q5wZyintuzsmBRn4OYU90j8ZoKU+yQbzgtdRrpBfWzwXVxy6Y+cNazYjF9KJ9Y=
+    - secure: U6UP6giVlLfiU5Y2Kcyrp+WZAIyeVGIUVr1a2RQ+PxHR5s8Rwqjptr+yWCj5vrtkyBev6lFXDKEy5aMhJ2p0zNiKQ5sUMe8ymvKaT30cwSE9QWa4A14UuUSNkHIt5hmfMZAKrAMfypSY9IilEGtel2oP5E7t43SkgK9XCcQTqZc=
+    - secure: dEq9FaS+5xS4vWuM2fkQCtRG5VT7S+md8AFt8ODGcJevr8AOMZVhrjBLlnWn+OW3uO9dTnjFXENDsp26Ow3gJF+7JeUdn03y3WUJoXQfR4j2fVrfpYIr4/2e3oXIiSok8YGUNnp0l1dULwKzYcEFeo10Hzhz1gMjLBh1ejFCyo4=
+    - secure: bn71pdBPPnKToF+4J6sM8HqQo8WPG2J8SNT1QByihZ+FZx6P93pTg6AYJIRZTGJFhD/C5klO6LPNNPRU/9efGtUW81PFx+y7luM1zNKSbJ147iRj+sIwrz+KGFFlz39k/3Pjb/zFAy0WyhhHsGoDLbFdvl6BXOpmZlytQAlrExs=
