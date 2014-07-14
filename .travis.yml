@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-- '0.11'
+  - '0.11'
 before_install:
-- sudo apt-get update -qq
-- sudo apt-get install -qq openjdk-7-jre wget
-- wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq openjdk-7-jre wget
+  - wget https://github.com/socrata/datasync/releases/download/1.0/datasync_1.0_java7.jar
 after_success:
-- npm run to-csv
-- npm run write-config
-- java -jar datasync_1.0_java7.jar
+  - npm run to-csv
+  - npm run write-config
+  - java -jar datasync_1.0_java7.jar
 env:
   global:
   - secure: UAZCvydsXeAnem2zIQKdFJXsIWPbo3tifsOhfvRUC0bCd7vPqcO9ws+/SY4sKlXf5E8N5uHNEONnJe5qspldHwcThbd+2JLTcK0WAUlxv8tv2MTZ83NgUWqUNMOWO/azwsqFObowFHNeT9EnK0V49sQbsNwjT3c17uUZ5ReCfHQ=
